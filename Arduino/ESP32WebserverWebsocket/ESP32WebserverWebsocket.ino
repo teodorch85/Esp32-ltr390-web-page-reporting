@@ -51,7 +51,7 @@ void setup() {
 
   Serial.println("\n[*] Creating AP");
   WiFi.mode(WIFI_AP);
-0  WiFi.softAP(ssid, password);  // start WiFi interface
+  WiFi.softAP(ssid, password);  // start WiFi interface
   server.on("/", []() {                      // define here wat the webserver needs to do
     server.send(200, "text/html", website);  //    -> it needs to send out the HTML string "webpage" to the client
   });
